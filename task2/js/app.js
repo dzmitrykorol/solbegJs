@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     let imageName = 'zombie-dead';
-    const imagePath = '/icons';
-    const extension = 'gif';
     const zombieParentSelector = document.querySelector('.zombies');
-    const zombieSrc = `${imagePath}/${imageName}.${extension}`;
 
     for (let zombie of zombies) {
-        const zombiePic = document.createElement('img');
+        const zombiePic = document.createElement('div');
+
         switch (zombie.type) {
             case ZOMBIE_TYPE.SMALL:
                 imageName = 'zombie-small';
@@ -22,11 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         zombiePic.classList.add(imageName);
-        zombiePic.src = `${imagePath}/${imageName}.${extension}`;
         zombieParentSelector.appendChild(zombiePic);
 
         zombiePic.addEventListener('click', () => {
-            zombiePic.src = zombieSrc;
             zombiePic.classList.add('dead');
         });
     }

@@ -10,9 +10,20 @@
     align-items: flex-end;
 }
 
-img {
+.zombie-small {
+    background: url('/icons/zombie-small.gif') no-repeat center;
+}
+
+.zombie-mad {
+    background: url('/icons/zombie-mad.gif') no-repeat center;
+}
+.zombie-strong {
+    background: url('/icons/zombie-strong.gif') no-repeat center;
+}
+
+.zombie-small, .zombie-mad, .zombie-strong {
     min-width: 162px;
-    max-width: 229px;
+    /* max-width: 229px; */
     min-height: 230px;
     height: 320px;
     border: 2px solid #eee;
@@ -20,6 +31,7 @@ img {
     margin: 10px;
 }
 
-img.dead {
+div.dead {
     height: 320px;
+    background: url('/icons/zombie-dead.gif') no-repeat;
 }
